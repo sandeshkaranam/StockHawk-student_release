@@ -10,5 +10,8 @@
   <string name="input_hint">FB</string>
   <string name="input_prefill"></string>
   <string name="widget_title">Today\'s Market</string>
-  <string name="network_toast">Uh-oh! This app requires an internet connection</string>
+  <string name="network_toast" translatable="true">Uh-oh! This app requires an internet connection</string>
+  <string name="saved_stock">This stock is already saved!</string>
+  <string name="no_network">No network connectivity available!</string>
+  <string name="invalid_symbol">Invalid stock symbol</string>
 </resources>
