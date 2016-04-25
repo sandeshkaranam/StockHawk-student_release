@@ -1,17 +1,26 @@
 <resources>
-  <string name="app_name">Stock Hawk</string>
+    <string name="app_name">Stock Hawk</string>
 
-  <string name="action_example">Example action</string>
+    <string name="action_example">Example action</string>
 
-  <string name="action_settings">Settings</string>
-  <string name="action_change_units">Change Units</string>
-  <string name="symbol_search">Symbol Search</string>
-  <string name="content_test">Search for a Stock Symbol</string>
-  <string name="input_hint">FB</string>
-  <string name="input_prefill"></string>
-  <string name="widget_title">Today\'s Market</string>
-  <string name="network_toast" translatable="true">Uh-oh! This app requires an internet connection</string>
-  <string name="saved_stock">This stock is already saved!</string>
-  <string name="no_network">No network connectivity available!</string>
-  <string name="invalid_symbol">Invalid stock symbol</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_change_units">Change Units</string>
+    <string name="symbol_search">Symbol Search</string>
+    <string name="content_test">Search for a Stock Symbol</string>
+    <string name="input_hint">FB</string>
+    <string name="input_prefill"></string>
+    <string name="widget_title">Today\'s Market</string>
+    <string name="network_toast" translatable="true">Uh-oh! This app requires an internet connection</string>
+    <string name="saved_stock">This stock is already saved!</string>
+    <string name="no_network">No network connectivity available!</string>
+    <string name="invalid_symbol">Invalid stock symbol</string>
+    <string name="one_week">1W</string>
+    <string name="one_month">1M</string>
+    <string name="three_month">3M</string>
+    <string name="six_month">6M</string>
+    <string name="one_year">1Y</string>
+    <string name="spiner_title">Stock history range</string>
+    <string name="quote_history_text">Quote history</string>
+    <string name="quote_history_error">No qoute history available</string>
+    <string name="empty_list">Empty list</string>
 </resources>

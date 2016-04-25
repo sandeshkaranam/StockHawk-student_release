@@ -92,6 +92,12 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
               @Override public void onItemClick(View v, int position) {
                 //TODO:
                 // do something on item click
+				mCursor.moveToPosition(position);
+                int dateColumnIndex = mCursor.getColumnIndex(QuoteColumns.SYMBOL);
+                String symbol = mCursor.getString(dateColumnIndex);
+                Intent myIntent = new Intent(mContext, DetailActivity.class);
+                myIntent.putExtra("symbol",symbol);
+                mContext.startActivity(myIntent);
               }
             }));
     recyclerView.setAdapter(mCursorAdapter);

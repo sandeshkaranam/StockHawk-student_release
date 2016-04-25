@@ -7,7 +7,13 @@ import android.net.NetworkInfo;
 import android.util.Log;
 import com.sam_chordas.android.stockhawk.data.QuoteColumns;
 import com.sam_chordas.android.stockhawk.data.QuoteProvider;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -103,5 +109,40 @@ public class Utils {
     NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
     return  activeNetwork != null &&
             activeNetwork.isConnectedOrConnecting();
+  }
+
+  public static final String DATE_FORMAT = "yyyy-MM-dd";
+  public enum SelectedDate {Week,Months_1,Months_3,Months_6,Year};
+
+
+  public static String getFormattedDate(long dateInMillis ) {
+    Locale localeUS = new Locale("en", "US");
+    SimpleDateFormat queryDayFormat = new SimpleDateFormat(Utils.DATE_FORMAT,localeUS);
+    return queryDayFormat.format(dateInMillis);
+  }
+
+  public static String getSelectedDate(Date date,SelectedDate selectedDate) {
+    Calendar cal = Calendar.getInstance();
+    cal.setTime(date);
+    switch (selectedDate) {
+      case Week:
+        cal.add(Calendar.DATE, -7);
+        return getFormattedDate(cal.getTimeInMillis());
+      case Months_1:
+        cal.add(Calendar.MONTH, -1);
+        return getFormattedDate(cal.getTimeInMillis());
+      case Months_3:
+        cal.add(Calendar.MONTH, -3);
+        return getFormattedDate(cal.getTimeInMillis());
+      case Months_6:
+        cal.add(Calendar.MONTH, -6);
+        return getFormattedDate(cal.getTimeInMillis());
+      case Year:
+        cal.add(Calendar.YEAR, -1);
+        return getFormattedDate(cal.getTimeInMillis());
+      default:
+        return null;
+    }
+
   }
 }
