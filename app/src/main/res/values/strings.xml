@@ -23,4 +23,5 @@
     <string name="quote_history_text">Quote history</string>
     <string name="quote_history_error">No qoute history available</string>
     <string name="empty_list">Empty list</string>
+    <string name="add_stock">Add new stock</string>
 </resources>
